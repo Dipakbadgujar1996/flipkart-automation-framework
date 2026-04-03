@@ -1,0 +1,5 @@
+com\flipkart\tests\HomePageTest.class
+com\flipkart\tests\ProductDetailTest.class
+com\flipkart\tests\ProductListingTest.class
+com\flipkart\tests\SearchTest.class
+com\flipkart\base\BaseTest.class

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Flipkart Test Suite" verbose="1" parallel="false">
+
+    <listeners>
+        <listener class-name="com.flipkart.utils.TestListener"/>
+    </listeners>
+
+    <test name="Homepage Tests">
+        <classes>
+            <class name="com.flipkart.tests.HomePageTest"/>
+        </classes>
+    </test>
+
+    <test name="Search Tests">
+        <classes>
+            <class name="com.flipkart.tests.SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="Product Listing Tests">
+        <classes>
+            <class name="com.flipkart.tests.ProductListingTest"/>
+        </classes>
+    </test>
+    
+    
+    <test name="Product Detail Tests">
+        <classes>
+            <class name="com.flipkart.tests.ProductDetailTest"/>
+        </classes>
+    </test>
+
+</suite>
