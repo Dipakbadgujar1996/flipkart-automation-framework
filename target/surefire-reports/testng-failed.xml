@@ -4,18 +4,24 @@
   <listeners>
     <listener class-name="com.flipkart.utils.TestListener"/>
   </listeners>
-  <test thread-count="5" name="Product Detail Tests(failed)" verbose="0">
+  <test thread-count="5" name="Product Listing Tests(failed)" verbose="0">
     <classes>
-      <class name="com.flipkart.tests.ProductDetailTest">
+      <class name="com.flipkart.tests.ProductListingTest">
         <methods>
+          <include name="verifyPricesDisplayed"/>
           <include name="tearDown"/>
-          <include name="verifySpecificationsDisplayed"/>
+          <include name="verifyPriceFilterApplied"/>
+          <include name="verifyRatingFilterApplied"/>
+          <include name="verifyProductsDisplay"/>
+          <include name="verifySortByNewestFirst"/>
           <include name="setUpPage"/>
+          <include name="verifyProductImagesLoaded"/>
           <include name="setUp"/>
-          <include name="verifyAddToCartButtonPresent"/>
-          <include name="verifyRatingDisplayed"/>
+          <include name="verifySortByPopularity"/>
+          <include name="verifySortByLowToHigh"/>
+          <include name="verifySortByHighToLow"/>
         </methods>
-      </class> <!-- com.flipkart.tests.ProductDetailTest -->
+      </class> <!-- com.flipkart.tests.ProductListingTest -->
     </classes>
-  </test> <!-- Product Detail Tests(failed) -->
+  </test> <!-- Product Listing Tests(failed) -->
 </suite> <!-- Failed suite [Flipkart Test Suite] -->

@@ -24,11 +24,16 @@
             <class name="com.flipkart.tests.ProductListingTest"/>
         </classes>
     </test>
-    
-    
+
     <test name="Product Detail Tests">
         <classes>
             <class name="com.flipkart.tests.ProductDetailTest"/>
+        </classes>
+    </test>
+
+    <test name="Cart Tests">
+        <classes>
+            <class name="com.flipkart.tests.CartTest"/>
         </classes>
     </test>
 

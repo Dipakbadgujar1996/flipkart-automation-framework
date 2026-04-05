@@ -13,7 +13,7 @@ public class BaseTest {
 	    try {
 	        DriverManager.initDriver();
 	        DriverManager.openUrl(ConfigReader.getBaseUrl());
-	        Thread.sleep(3000);
+	        Thread.sleep(6000);
 	    } catch (Exception e) {
 	        System.out.println("Setup failed: " + e.getMessage());
 	        // Retry once
