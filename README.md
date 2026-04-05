@@ -20,14 +20,15 @@ A professional Selenium WebDriver automation framework built with Java + TestNG 
 - Cross browser support (Chrome + Firefox)
 - TestNG listeners
 
-## Test Coverage — 52 Tests Passing
+## Test Coverage — 67 Tests Passing
 | Module | Tests |
 |--------|-------|
 | Homepage | 10 |
 | Search | 12 |
 | Product Listing | 15 |
 | Product Detail | 15 |
-| **Total** | **52** |
+| Cart | 15 |
+| **Total** | **67** |
 
 ## Project Structure
 src/
