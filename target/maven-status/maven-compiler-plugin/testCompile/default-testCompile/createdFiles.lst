@@ -1,6 +1,8 @@
+com\flipkart\tests\LoginTest.class
 com\flipkart\tests\CartTest.class
 com\flipkart\tests\HomePageTest.class
 com\flipkart\tests\ProductDetailTest.class
 com\flipkart\tests\ProductListingTest.class
 com\flipkart\tests\SearchTest.class
+com\flipkart\tests\WishlistTest.class
 com\flipkart\base\BaseTest.class

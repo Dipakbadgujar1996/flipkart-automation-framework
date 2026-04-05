@@ -37,4 +37,16 @@
         </classes>
     </test>
 
+    <test name="Login Tests">
+        <classes>
+            <class name="com.flipkart.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Wishlist Tests">
+        <classes>
+            <class name="com.flipkart.tests.WishlistTest"/>
+        </classes>
+    </test>
+
 </suite>

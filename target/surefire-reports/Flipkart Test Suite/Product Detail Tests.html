@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Product Detail Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>15/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Apr 05 10:02:01 IST 2026</td>
+<td>Started on:</td><td>Sun Apr 05 10:56:27 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>599 seconds (599988 ms)</td>
+<tr><td>Total time:</td><td>722 seconds (722868 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,59 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.flipkart.tests.ProductDetailTest.verifyThumbnailClick()'><b>verifyThumbnailClick</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify thumbnail click changes main image</td>
+<td><div><pre>java.lang.AssertionError: Images should still be visible after thumbnail click! expected [true] but found [false]
+	at com.flipkart.tests.ProductDetailTest.verifyThumbnailClick(ProductDetailTest.java:176)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1203520581", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1203520581'><pre>java.lang.AssertionError: Images should still be visible after thumbnail click! expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.flipkart.tests.ProductDetailTest.verifyThumbnailClick(ProductDetailTest.java:176)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>45</td>
+<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,12 +129,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.flipkart.tests.ProductDetailTest.verifyDeliveryInfoDisplayed()'><b>verifyDeliveryInfoDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify delivery info is displayed</td>
+<td title='com.flipkart.tests.ProductDetailTest.verifyAddToCartButtonPresent()'><b>verifyAddToCartButtonPresent</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify Add to Cart button is present</td>
 <td></td>
-<td>0</td>
+<td>1</td>
 <td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
 <tr>
-<td title='com.flipkart.tests.ProductDetailTest.verifyProductTitleDisplayed()'><b>verifyProductTitleDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify product title is displayed</td>
+<td title='com.flipkart.tests.ProductDetailTest.verifySpecificationsDisplayed()'><b>verifySpecificationsDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify specifications are displayed</td>
+<td></td>
+<td>2</td>
+<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
+<tr>
+<td title='com.flipkart.tests.ProductDetailTest.verifySellerInfoDisplayed()'><b>verifySellerInfoDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify seller info is displayed</td>
 <td></td>
 <td>0</td>
 <td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
@@ -93,17 +151,42 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.flipkart.tests.ProductDetailTest.verifyOffersDisplayed()'><b>verifyOffersDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify offers section is displayed</td>
 <td></td>
-<td>0</td>
+<td>2</td>
 <td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
 <tr>
-<td title='com.flipkart.tests.ProductDetailTest.verifySellerInfoDisplayed()'><b>verifySellerInfoDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify seller info is displayed</td>
+<td title='com.flipkart.tests.ProductDetailTest.verifyDeliveryInfoDisplayed()'><b>verifyDeliveryInfoDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify delivery info is displayed</td>
 <td></td>
 <td>0</td>
 <td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
 <tr>
 <td title='com.flipkart.tests.ProductDetailTest.verifyProductImagesDisplayed()'><b>verifyProductImagesDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify product images are displayed</td>
 <td></td>
+<td>2</td>
+<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
+<tr>
+<td title='com.flipkart.tests.ProductDetailTest.verifyUrlContainsProductId()'><b>verifyUrlContainsProductId</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify URL contains product identifier</td>
+<td></td>
 <td>0</td>
+<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
+<tr>
+<td title='com.flipkart.tests.ProductDetailTest.verifyRatingDisplayed()'><b>verifyRatingDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify product rating is displayed</td>
+<td></td>
+<td>0</td>
+<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
+<tr>
+<td title='com.flipkart.tests.ProductDetailTest.verifyBuyNowButtonPresent()'><b>verifyBuyNowButtonPresent</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify Buy Now button is present</td>
+<td></td>
+<td>4</td>
+<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
+<tr>
+<td title='com.flipkart.tests.ProductDetailTest.verifyProductTitleDisplayed()'><b>verifyProductTitleDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify product title is displayed</td>
+<td></td>
+<td>0</td>
+<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
+<tr>
+<td title='com.flipkart.tests.ProductDetailTest.verifyMrpDisplayed()'><b>verifyMrpDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify MRP and discount are shown</td>
+<td></td>
+<td>2</td>
 <td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
 <tr>
 <td title='com.flipkart.tests.ProductDetailTest.verifyProductPageLoaded()'><b>verifyProductPageLoaded</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify product detail page loads</td>
@@ -113,42 +196,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.flipkart.tests.ProductDetailTest.verifyProductPriceDisplayed()'><b>verifyProductPriceDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify product price is displayed</td>
 <td></td>
-<td>1</td>
-<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
-<tr>
-<td title='com.flipkart.tests.ProductDetailTest.verifySpecificationsDisplayed()'><b>verifySpecificationsDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify specifications are displayed</td>
-<td></td>
-<td>2</td>
-<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
-<tr>
-<td title='com.flipkart.tests.ProductDetailTest.verifyThumbnailClick()'><b>verifyThumbnailClick</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify thumbnail click changes main image</td>
-<td></td>
-<td>1</td>
-<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
-<tr>
-<td title='com.flipkart.tests.ProductDetailTest.verifyMrpDisplayed()'><b>verifyMrpDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify MRP and discount are shown</td>
-<td></td>
-<td>0</td>
-<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
-<tr>
-<td title='com.flipkart.tests.ProductDetailTest.verifyBuyNowButtonPresent()'><b>verifyBuyNowButtonPresent</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify Buy Now button is present</td>
-<td></td>
-<td>1</td>
-<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
-<tr>
-<td title='com.flipkart.tests.ProductDetailTest.verifyRatingDisplayed()'><b>verifyRatingDisplayed</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify product rating is displayed</td>
-<td></td>
-<td>0</td>
-<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
-<tr>
-<td title='com.flipkart.tests.ProductDetailTest.verifyUrlContainsProductId()'><b>verifyUrlContainsProductId</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify URL contains product identifier</td>
-<td></td>
-<td>0</td>
-<td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
-<tr>
-<td title='com.flipkart.tests.ProductDetailTest.verifyAddToCartButtonPresent()'><b>verifyAddToCartButtonPresent</b><br>Test class: com.flipkart.tests.ProductDetailTest<br>Test method: Verify Add to Cart button is present</td>
-<td></td>
-<td>1</td>
+<td>7</td>
 <td>com.flipkart.tests.ProductDetailTest@3fc2959f</td></tr>
 </table><p>
 </body>
