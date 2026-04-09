@@ -4,29 +4,53 @@
   <listeners>
     <listener class-name="com.flipkart.utils.TestListener"/>
   </listeners>
+  <test thread-count="5" name="Homepage Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.flipkart.tests.HomePageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUpPage"/>
+          <include name="verifyDealsAreVisible"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.flipkart.tests.HomePageTest -->
+    </classes>
+  </test> <!-- Homepage Tests(failed) -->
+  <test thread-count="5" name="Search Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.flipkart.tests.SearchTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyResultCountIsGreaterThanZero"/>
+          <include name="setUpPage"/>
+        </methods>
+      </class> <!-- com.flipkart.tests.SearchTest -->
+    </classes>
+  </test> <!-- Search Tests(failed) -->
+  <test thread-count="5" name="Product Listing Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.flipkart.tests.ProductListingTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyPriceFilterApplied"/>
+          <include name="setUpPage"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.flipkart.tests.ProductListingTest -->
+    </classes>
+  </test> <!-- Product Listing Tests(failed) -->
   <test thread-count="5" name="Product Detail Tests(failed)" verbose="0">
     <classes>
       <class name="com.flipkart.tests.ProductDetailTest">
         <methods>
           <include name="tearDown"/>
-          <include name="verifyThumbnailClick"/>
+          <include name="verifyUrlContainsProductId"/>
           <include name="setUpPage"/>
           <include name="setUp"/>
+          <include name="verifyAddToCartButtonPresent"/>
         </methods>
       </class> <!-- com.flipkart.tests.ProductDetailTest -->
     </classes>
   </test> <!-- Product Detail Tests(failed) -->
-  <test thread-count="5" name="Login Tests(failed)" verbose="0">
-    <classes>
-      <class name="com.flipkart.tests.LoginTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verifyMobileInputPresent"/>
-          <include name="verifyLoginPageLoads"/>
-          <include name="setUpPage"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.flipkart.tests.LoginTest -->
-    </classes>
-  </test> <!-- Login Tests(failed) -->
 </suite> <!-- Failed suite [Flipkart Test Suite] -->

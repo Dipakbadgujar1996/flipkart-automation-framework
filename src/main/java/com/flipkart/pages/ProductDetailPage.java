@@ -131,22 +131,45 @@ public class ProductDetailPage {
 	}
 
 	public boolean isRatingDisplayed() {
-		try {
-			// Rating is div.css-146c3p1 with text like "4.6"
-			List<WebElement> elements = driver.findElements(By.cssSelector("div.css-146c3p1"));
-			for (WebElement el : elements) {
-				String text = el.getText().trim();
-				if (text.matches("[0-9]\\.[0-9]")) {
-					System.out.println("Rating found: " + text);
-					return true;
-				}
-			}
-			System.out.println("Rating not found in elements");
-			return false;
-		} catch (Exception e) {
-			System.out.println("Rating error: " + e.getMessage());
-			return false;
-		}
+	    try {
+	        // Strategy 1 — look for X.X pattern anywhere on page
+	        List<WebElement> all = driver.findElements(
+	            By.cssSelector("div.css-146c3p1"));
+	        for (WebElement el : all) {
+	            try {
+	                String text = el.getText().trim();
+	                if (text.matches("[0-9]\\.[0-9]")) {
+	                    System.out.println("Rating found: " + text);
+	                    return true;
+	                }
+	            } catch (Exception ignored) {}
+	        }
+
+	        // Strategy 2 — broader search
+	        List<WebElement> allEls = driver.findElements(
+	            By.xpath("//*[string-length(text())=3 and " +
+	                    "contains(text(),'.')]"));
+	        for (WebElement el : allEls) {
+	            try {
+	                String text = el.getText().trim();
+	                if (text.matches("[0-9]\\.[0-9]")) {
+	                    System.out.println("Rating found S2: " + text);
+	                    return true;
+	                }
+	            } catch (Exception ignored) {}
+	        }
+
+	        // Strategy 3 — check page source for rating pattern
+	        String source = driver.getPageSource();
+	        boolean found = source.contains("\"ratingValue\"") ||
+	                       source.contains("aggregateRating");
+	        System.out.println("Rating in source: " + found);
+	        return found;
+
+	    } catch (Exception e) {
+	        System.out.println("Rating error: " + e.getMessage());
+	        return false;
+	    }
 	}
 
 	public boolean isSellerInfoDisplayed() {

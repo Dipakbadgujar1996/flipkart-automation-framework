@@ -49,4 +49,25 @@
         </classes>
     </test>
 
+    <test name="Navigation Tests">
+        <classes>
+            <class name="com.flipkart.tests.NavigationTest"/>
+        </classes>
+    </test>
+
+    <test name="UI Responsive Tests">
+        <classes>
+            <class name="com.flipkart.tests.UIResponsiveTest"/>
+        </classes>
+    </test>
+	<test name="Performance Tests">
+        <classes>
+            <class name="com.flipkart.tests.PerformanceTest"/>
+        </classes>
+    </test>
+
+   
+
+  
+
 </suite>

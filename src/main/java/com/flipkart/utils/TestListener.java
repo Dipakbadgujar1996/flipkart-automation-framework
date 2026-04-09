@@ -5,38 +5,52 @@ import com.aventstack.extentreports.Status;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.ISuite;
+import org.testng.ISuiteListener;
 
-public class TestListener implements ITestListener {
+public class TestListener implements ITestListener, ISuiteListener {
 
+    // ─── Suite Start — runs ONCE for entire suite ─────────────────
+    @Override
+    public void onStart(ISuite suite) {
+        ExtentReportManager.initReport();
+        System.out.println("Suite Started: " + suite.getName());
+    }
+
+    // ─── Suite End — runs ONCE after all tests ────────────────────
+    @Override
+    public void onFinish(ISuite suite) {
+        ExtentReportManager.flushReport();
+        System.out.println("Suite Finished! Report generated.");
+    }
+
+    // ─── These are ITestListener methods ─────────────────────────
     @Override
     public void onStart(ITestContext context) {
-        ExtentReportManager.initReport();
-        System.out.println("Suite Started: " 
+        System.out.println("Test group started: "
             + context.getName());
     }
 
     @Override
     public void onFinish(ITestContext context) {
-        ExtentReportManager.flushReport();
-        System.out.println("Report: " +
-            "reports/FlipkartTestReport.html");
+        System.out.println("Test group finished: "
+            + context.getName());
     }
 
     @Override
     public void onTestStart(ITestResult result) {
-        String description = result.getMethod()
-            .getDescription();
+        String description = result.getMethod().getDescription();
         ExtentReportManager.createTest(
             result.getName(), description);
         ExtentReportManager.getTest()
-            .log(Status.INFO, "Test Started: " 
+            .log(Status.INFO, "Test Started: "
                 + result.getName());
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
         ExtentReportManager.getTest()
-            .log(Status.PASS, "✅ Passed: " 
+            .log(Status.PASS, "✅ Passed: "
                 + result.getName());
         ExtentReportManager.removeTest();
     }
@@ -44,10 +58,10 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         ExtentReportManager.getTest()
-            .log(Status.FAIL, "❌ Failed: " 
+            .log(Status.FAIL, "❌ Failed: "
                 + result.getName());
         ExtentReportManager.getTest()
-            .log(Status.FAIL, "Reason: " 
+            .log(Status.FAIL, "Reason: "
                 + result.getThrowable());
         try {
             String base64 = ScreenshotUtils
@@ -61,7 +75,7 @@ public class TestListener implements ITestListener {
                             base64).build());
             }
         } catch (Exception e) {
-            System.err.println("Screenshot error: " 
+            System.err.println("Screenshot error: "
                 + e.getMessage());
         }
         ExtentReportManager.removeTest();
@@ -70,7 +84,7 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestSkipped(ITestResult result) {
         ExtentReportManager.getTest()
-            .log(Status.SKIP, "⚠️ Skipped: " 
+            .log(Status.SKIP, "⚠️ Skipped: "
                 + result.getName());
         ExtentReportManager.removeTest();
     }

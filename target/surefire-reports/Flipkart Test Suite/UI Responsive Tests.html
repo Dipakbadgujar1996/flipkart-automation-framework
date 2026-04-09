@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>TestNG:  UI Responsive Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>UI Responsive Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Apr 09 16:29:33 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>127 seconds (127305 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.flipkart.tests.UIResponsiveTest.verifyFooterPresent()'><b>verifyFooterPresent</b><br>Test class: com.flipkart.tests.UIResponsiveTest<br>Test method: Verify footer is present on homepage</td>
+<td></td>
+<td>1</td>
+<td>com.flipkart.tests.UIResponsiveTest@247bddad</td></tr>
+<tr>
+<td title='com.flipkart.tests.UIResponsiveTest.verifyNoBrokenImages()'><b>verifyNoBrokenImages</b><br>Test class: com.flipkart.tests.UIResponsiveTest<br>Test method: Verify no broken images on homepage</td>
+<td></td>
+<td>1</td>
+<td>com.flipkart.tests.UIResponsiveTest@247bddad</td></tr>
+<tr>
+<td title='com.flipkart.tests.UIResponsiveTest.verifyLayoutOn1366x768()'><b>verifyLayoutOn1366x768</b><br>Test class: com.flipkart.tests.UIResponsiveTest<br>Test method: Verify layout on 1366x768 resolution</td>
+<td></td>
+<td>2</td>
+<td>com.flipkart.tests.UIResponsiveTest@247bddad</td></tr>
+<tr>
+<td title='com.flipkart.tests.UIResponsiveTest.verifyPageTitleNotEmpty()'><b>verifyPageTitleNotEmpty</b><br>Test class: com.flipkart.tests.UIResponsiveTest<br>Test method: Verify page title is not empty</td>
+<td></td>
+<td>0</td>
+<td>com.flipkart.tests.UIResponsiveTest@247bddad</td></tr>
+<tr>
+<td title='com.flipkart.tests.UIResponsiveTest.verifyScrollToTop()'><b>verifyScrollToTop</b><br>Test class: com.flipkart.tests.UIResponsiveTest<br>Test method: Verify scroll to top works</td>
+<td></td>
+<td>2</td>
+<td>com.flipkart.tests.UIResponsiveTest@247bddad</td></tr>
+<tr>
+<td title='com.flipkart.tests.UIResponsiveTest.verifyLayoutOn1920x1080()'><b>verifyLayoutOn1920x1080</b><br>Test class: com.flipkart.tests.UIResponsiveTest<br>Test method: Verify layout on 1920x1080 resolution</td>
+<td></td>
+<td>2</td>
+<td>com.flipkart.tests.UIResponsiveTest@247bddad</td></tr>
+<tr>
+<td title='com.flipkart.tests.UIResponsiveTest.verifyNoHorizontalScroll()'><b>verifyNoHorizontalScroll</b><br>Test class: com.flipkart.tests.UIResponsiveTest<br>Test method: Verify page has no horizontal scroll</td>
+<td></td>
+<td>0</td>
+<td>com.flipkart.tests.UIResponsiveTest@247bddad</td></tr>
+</table><p>
+</body>
+</html>
